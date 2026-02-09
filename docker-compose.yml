@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16-alpine # Versão leve do Postgres
+    container_name: safevault-db
+    ports:
+      - "5432:5432" # Porta externa : Porta interna
+    environment:
+      POSTGRES_DB: safevault
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Onde os dados ficam guardados
+    restart: always
+
+volumes:
+  postgres_data:

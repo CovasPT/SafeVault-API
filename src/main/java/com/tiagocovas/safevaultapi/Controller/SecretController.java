@@ -13,6 +13,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/secrets")
+@SuppressWarnings("null")
 public class SecretController {
 
     private final SecretRepository repository;
@@ -40,7 +41,7 @@ public class SecretController {
                 .created(URI.create("/api/secrets/" + savedSecret.getId()))
                 .build();
     }
-    
+
     @GetMapping("/{id}")
     public ResponseEntity<String> getSecret(@PathVariable UUID id) {
         return repository.findById(id)

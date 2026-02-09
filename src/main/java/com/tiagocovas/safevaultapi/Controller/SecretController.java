@@ -3,7 +3,7 @@ package com.tiagocovas.safevaultapi.controller;
 import com.tiagocovas.safevaultapi.domain.Secret;
 import com.tiagocovas.safevaultapi.dto.CreateSecretRequest;
 import com.tiagocovas.safevaultapi.repository.SecretRepository;
-import com.tiagocovas.safevaultapi.security.EncryptionService;
+import com.tiagocovas.safevaultapi.core.security.EncryptionService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

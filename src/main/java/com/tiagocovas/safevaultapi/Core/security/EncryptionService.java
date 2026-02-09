@@ -1,4 +1,4 @@
-package com.tiagocovas.safevaultapi.Security;
+package com.tiagocovas.safevaultapi.Core.Security;
 
 public interface EncryptionService {
     String encrypt(String rawData);
